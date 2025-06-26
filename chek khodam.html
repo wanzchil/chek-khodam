@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cek Khodam By Wanz Mode Gabut</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://img1.pixhost.to/images/6772/615534967_wanz.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Cinzel Decorative', cursive;
+      color: red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #000000aa;
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffffff33;
+    }
+
+    #hasil {
+      margin-top: 30px;
+      font-size: 2em;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🔮 Cek Khodam 🔮</h1>
+  <button onclick="cekKhodam()">Cek Sekarang</button>
+  <div id="hasil"></div>
+
+  <script>
+    const khodamList = [
+      "🐗 Babi Hutan",
+      "👽 Alien Sumatra",
+      "🌀 Penghancur Lobang",
+      "🍑 Pantat Hitam",
+      "🍆 Terong Emas",
+      "💩 Tai Encer",
+      "💨 Kentut Berdahak",
+      "🐀 Tikus Mabok",
+      "🐷 Babi Pincang"
+    ];
+
+    function cekKhodam() {
+      const hasil = document.getElementById("hasil");
+      const random = khodamList[Math.floor(Math.random() * khodamList.length)];
+      hasil.innerHTML = `Khodam kamu adalah: <strong>${random}</strong>`;
+      const audio = new Audio('https://www.myinstants.com/media/sounds/mystery.mp3');
+      audio.play();
+    }
+  </script>
+</body>
+</html>
